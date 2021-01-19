@@ -13,11 +13,11 @@ CATEGORIES = None
 CATEGORIES_RECH = None
 MIN_CONFIDENCE = None
 
-LOADED_MODEL = keras.models.load_model(h5py.File(os.environ.get('MODEL','/Users/sebastianbecerraa/Code/api-ml-vestuario/models/model_v3.hdf5'), 'r'))
+LOADED_MODEL = keras.models.load_model(h5py.File(os.environ.get('MODEL',''), 'r'))
     
 LOADED_MODEL.summary()
 
-CATEGORIES = os.environ.get('CATEGORIES','Vestidos,Jeans,Poleras/Camisas').split(',')
+CATEGORIES = os.environ.get('CATEGORIES','').split(',')
 
 MIN_CONFIDENCE = int(os.environ.get("MIN_CONFIDENCE","60"))
 
