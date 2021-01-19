@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-ml-vestuario
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api-ml-vestuario
+  template:
+    metadata:
+      labels:
+        app: api-ml-vestuario
+    spec:
+      containers:
+        - name: api-ml-vestuario
+          image: api-ml-vestuario:latest
+          imagePullPolicy: Never
+          ports:
+          - containerPort: 80
+            protocol: TCP
+      restartPolicy: Always

@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+Pillow
+numpy==1.18.0
+tensorflow==2.3.0
+keras
+python-multipart
+opencv-python
+h5py===2.10.0
